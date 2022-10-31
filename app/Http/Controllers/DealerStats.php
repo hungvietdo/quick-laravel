@@ -94,15 +94,14 @@ class DealerStats extends Controller
             return [$elementToAdd];
         }
 
-        $result = [];
-        foreach ($array as $element) {
-            if ($element[$filterName] == $elementToAdd[$filterName]) {
-                $elementToAdd['totalCount'] += $element['totalCount'];
-            } else {
-                $result[] = $element;
-            }
+        $result = $array;
+        $key = array_search($elementToAdd[$filterName], array_column($result, $filterName), true);
+
+        if ($key !== false) {
+            $result[$key]['totalCount'] += $elementToAdd['totalCount'];
+        } else {
+            $result[] = $elementToAdd;
         }
-        $result[] = $elementToAdd;
 
         return $result;
     }

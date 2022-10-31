@@ -23,13 +23,13 @@ class DealerStatsTest extends TestCase
             "classCounts" => [
                 [
                     "className" => "CLASS 1 (GVW 0 - 6000)",
-                    "classId" => "2",
-                    "totalCount" => "11"
+                    "classId" => "1",
+                    "totalCount" => "50"
                 ],
                 [
                     "className" => "CLASS 1 (GVW 0 - 6000)",
-                    "classId" => "1",
-                    "totalCount" => "50"
+                    "classId" => "2",
+                    "totalCount" => "11"
                 ],
                 [
                     "className" => "CLASS 1 (GVW 0 - 6000)",
